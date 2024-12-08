@@ -1,0 +1,36 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "andmohiko",
+    "autosize",
+    "dropzone",
+    "firebase",
+    "firestore",
+    "flatMap",
+    "gcloud",
+    "hono",
+    "hookform",
+    "mantine",
+    "mypage",
+    "navi",
+    "Navigations",
+    "nextauth",
+    "nextjs",
+    "openapi",
+    "predeploy",
+    "shisha",
+    "shishanavi",
+    "vercel",
+    "webp"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    ".next",
+    "public",
+    "*.js",
+    "*.log",
+    ".turbo",
+    ".git"
+  ]
+}
