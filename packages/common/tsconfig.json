@@ -1,0 +1,7 @@
+{
+  "extends": "@shishanavi/ts-config/base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node"
+  }
+}

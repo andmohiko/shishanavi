@@ -1,0 +1,24 @@
+{
+  "name": "@shishanavi/common",
+  "type": "module",
+  "private": true,
+  "main": "./dist/index.cjs",
+  "types": "./src/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.js"
+  },
+  "scripts": {
+    "postinstall": "pnpm build",
+    "build": "tsup --config tsup.config.ts"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@shishanavi/ts-config": "workspace:*",
+    "@types/node": "^20.12.7",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.3"
+  }
+}
