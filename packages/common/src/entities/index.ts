@@ -1,4 +1,5 @@
 export * from './Shop'
+export * from './ShopBusinessHour'
 export * from './ShopDetail'
 export * from './ShopImage'
 export * from './ShopPaymentMethod'

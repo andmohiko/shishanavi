@@ -1,3 +1,4 @@
+import type { ShopBusinessHour } from './ShopBusinessHour'
 import type { ShopDetail } from './ShopDetail'
 import type { ShopImage } from './ShopImage'
 import type { ShopPaymentMethod } from './ShopPaymentMethod'
@@ -15,6 +16,7 @@ export type Shop = {
 }
 
 export type ShopWithDetails = Shop & {
+  businessHours: Array<ShopBusinessHour>
   detail: ShopDetail
   images: Array<ShopImage>
   paymentMethods: Array<ShopPaymentMethod>
