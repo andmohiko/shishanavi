@@ -1,5 +1,6 @@
 import type { ShopDetail } from './ShopDetail'
 import type { ShopImage } from './ShopImage'
+import type { ShopPaymentMethod } from './ShopPaymentMethod'
 import type { ShopSocialMedia } from './ShopSocialMedia'
 import type { User } from './User'
 
@@ -16,5 +17,6 @@ export type Shop = {
 export type ShopWithDetails = Shop & {
   detail: ShopDetail
   images: Array<ShopImage>
+  paymentMethods: Array<ShopPaymentMethod>
   socialMedias: Array<ShopSocialMedia>
 }
