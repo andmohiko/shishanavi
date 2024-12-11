@@ -6,11 +6,11 @@ export type ShopPricing = {
   // 予算
   budget: string
   // シーシャ料金
-  shishaPrice: string
+  shishaFee: string
   // チャージ料金
-  chargePrice: string
+  chargeFee: string
   // その他料金
-  otherPrice: string
+  otherFee: string
   // 備考
   note: string
   isDeleted: boolean

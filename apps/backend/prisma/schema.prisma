@@ -22,8 +22,180 @@ model User {
   role      Role
   isBanned  Boolean  @default(false) @map("is_banned")
   isDeleted Boolean  @default(false) @map("is_deleted")
-  createdAt DateTime @default(now()) @db.Timestamp(0) @map("created_at")
-  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp(0) @map("updated_at")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  shops Shop[]
 
   @@map("users")
+}
+
+model Shop {
+  id             String             @id @default(cuid())
+  name           String
+  userId         String             @map("user_id")
+  user           User               @relation(fields: [userId], references: [id])
+  isBanned       Boolean            @default(false) @map("is_banned")
+  isDeleted      Boolean            @default(false) @map("is_deleted")
+  createdAt      DateTime           @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt      DateTime           @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  businessHours  ShopBusinessHour[]
+  detail         ShopDetail?
+  facilityRules  ShopFacilityRule?
+  features       ShopFeature?
+  images         ShopImage[]
+  paymentMethods ShopPaymentMethod?
+  pricing        ShopPricing?
+  socialMedias   ShopSocialMedia[]
+
+  @@map("shops")
+}
+
+enum Day {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+model ShopBusinessHour {
+  id            String   @id @default(cuid())
+  shopId        String   @map("shop_id")
+  shop          Shop     @relation(fields: [shopId], references: [id])
+  day           Day
+  openTime      String   @map("open_time")
+  lastOrderTime String   @map("last_order_time")
+  closeTime     String   @map("close_time")
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt     DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_business_hours")
+}
+
+model ShopDetail {
+  id                               String   @id @default(cuid())
+  shopId                           String   @unique @map("shop_id")
+  shop                             Shop     @relation(fields: [shopId], references: [id])
+  country                          String // 国
+  prefecture                       String // 都道府県
+  city                             String // 市区町村
+  address                          String // 住所
+  googleMapUrl                     String   @map("google_map_url") // Google Map URL
+  nearestStation                   String   @map("nearest_station") // 最寄駅
+  walkingMinutesFromNearestStation Int      @map("walking_minutes_from_nearest_station") // 最寄駅からの徒歩分数
+  access                           String // アクセス
+  phoneNumber                      String   @map("phone_number") // 電話番号
+  regularHoliday                   String   @map("regular_holiday") // 定休日
+  openedAt                         DateTime @map("opened_at") @db.Date // 開店日
+  seats                            String // 座席
+  note                             String // 備考
+  isDeleted                        Boolean  @default(false) @map("is_deleted")
+  createdAt                        DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt                        DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_details")
+}
+
+model ShopFacilityRule {
+  id              String   @id @default(cuid())
+  shopId          String   @unique @map("shop_id")
+  shop            Shop     @relation(fields: [shopId], references: [id])
+  canSmoke        Boolean  @map("can_smoke") // 喫煙可能
+  canAlcoholServe Boolean  @map("can_alcohol_serve") // アルコール提供可能
+  canBringFood    Boolean  @map("can_bring_food") // 食べ物持ち込み可能
+  hasWifi         Boolean  @map("has_wifi") // wifiあり
+  hasPowerTap     Boolean  @map("has_power_tap") // 電源タップあり
+  hasParking      Boolean  @map("has_parking") // 駐車場あり
+  canCharter      Boolean  @map("can_charter") // 貸切可能
+  canReserve      Boolean  @map("can_reserve") // 予約可能
+  hasPrivateRoom  Boolean  @map("has_private_room") // 個室あり
+  hasGoods        Boolean  @map("has_goods") // 販売物あり
+  isDeleted       Boolean  @default(false) @map("is_deleted")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt       DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_facility_rules")
+}
+
+model ShopFeature {
+  id                 String   @id @default(cuid())
+  shopId             String   @unique @map("shop_id")
+  shop               Shop     @relation(fields: [shopId], references: [id])
+  gearBrands         String   @map("gear_brands") // 機材ブランド
+  flavors            String // フレーバー
+  recommendedFlavors String   @map("recommended_flavors") // おすすめフレーバー
+  atmosphere         String // 雰囲気
+  isDeleted          Boolean  @default(false) @map("is_deleted")
+  createdAt          DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt          DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_features")
+}
+
+model ShopImage {
+  id           String   @id @default(cuid())
+  shopId       String   @map("shop_id")
+  shop         Shop     @relation(fields: [shopId], references: [id])
+  imagePath    String   @map("image_path")
+  displayOrder Int      @map("display_order")
+  isArchived   Boolean  @default(false) @map("is_archived")
+  isDeleted    Boolean  @default(false) @map("is_deleted")
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt    DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_images")
+}
+
+model ShopPaymentMethod {
+  id                 String   @id @default(cuid())
+  shopId             String   @unique @map("shop_id")
+  shop               Shop     @relation(fields: [shopId], references: [id])
+  canCash            Boolean  @map("can_cash")
+  canCreditCard      Boolean  @map("can_credit_card")
+  canQrCode          Boolean  @map("can_qr_code")
+  canElectronicMoney Boolean  @map("can_electronic_money")
+  isDeleted          Boolean  @default(false) @map("is_deleted")
+  createdAt          DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt          DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_payment_methods")
+}
+
+model ShopPricing {
+  id        String   @id @default(cuid())
+  shopId    String   @unique @map("shop_id")
+  shop      Shop     @relation(fields: [shopId], references: [id])
+  budget    String // 予算
+  shishaFee String   @map("shisha_fee") // シーシャ料金
+  chargeFee String   @map("charge_fee") // チャージ料金
+  otherFee  String   @map("other_fee") // その他料金
+  note      String // 備考
+  isDeleted Boolean  @default(false) @map("is_deleted")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_pricings")
+}
+
+enum SocialMediaType {
+  INSTAGRAM
+  LINE
+  X
+}
+
+model ShopSocialMedia {
+  id              String          @id @default(cuid())
+  shopId          String          @map("shop_id")
+  shop            Shop            @relation(fields: [shopId], references: [id])
+  socialMediaType SocialMediaType @map("social_media_type")
+  url             String
+  isArchived      Boolean         @default(false) @map("is_archived")
+  isDeleted       Boolean         @default(false) @map("is_deleted")
+  createdAt       DateTime        @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt       DateTime        @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@map("shop_social_medias")
 }

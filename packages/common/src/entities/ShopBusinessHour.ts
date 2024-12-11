@@ -2,13 +2,13 @@ import { z } from 'zod'
 import type { Shop } from './Shop'
 
 export const daySchema = z.enum([
-  'monday',
-  'tuesday',
-  'wednesday',
-  'thursday',
-  'friday',
-  'saturday',
-  'sunday',
+  'MONDAY',
+  'TUESDAY',
+  'WEDNESDAY',
+  'THURSDAY',
+  'FRIDAY',
+  'SATURDAY',
+  'SUNDAY',
 ])
 
 export type Day = z.infer<typeof daySchema>

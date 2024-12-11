@@ -1,14 +1,7 @@
 import { z } from 'zod'
 import type { Shop } from './Shop'
 
-export const socialMediaTypeSchema = z.enum([
-  'x',
-  'facebook',
-  'instagram',
-  'line',
-  'youtube',
-  'lik.link',
-])
+export const socialMediaTypeSchema = z.enum(['INSTAGRAM', 'LINE', 'X'])
 
 export type SocialMediaType = z.infer<typeof socialMediaTypeSchema>
 
