@@ -1,0 +1,36 @@
+{
+  "name": "@shishanavi/backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "pnpm prisma generate && tsc && tsc-alias",
+    "predeploy": "pnpm prisma migrate deploy && pnpm prisma db seed",
+    "start": "node dist/src/index.js",
+    "lint:tsc": "tsc --noEmit",
+    "lint:eslint": "eslint src --ext .js,.ts",
+    "lint:prettier": "prettier --check src --config ../../.prettierrc.js",
+    "lint:cspell": "cspell -c ../../cspell.json src/**/*",
+    "format:eslint": "eslint src --ext .js,.ts --fix",
+    "format:prettier": "prettier --write src --config ../../.prettierrc.js",
+    "prisma:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.5",
+    "@hono/sentry": "^1.2.0",
+    "@shishanavi/common": "workspace:*",
+    "@prisma/client": "5.22.0",
+    "hono": "^4.6.9",
+    "tsc-alias": "^1.8.8",
+    "uuid": "^11.0.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@shishanavi/ts-config": "workspace:*",
+    "@types/node": "^20.11.17",
+    "@types/uuid": "^10.0.0",
+    "prisma": "^5.22.0",
+    "tsx": "^4.19.2",
+    "typescript": "5.6.3"
+  }
+}
