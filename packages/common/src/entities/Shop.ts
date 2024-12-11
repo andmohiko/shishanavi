@@ -1,7 +1,10 @@
 import type { ShopBusinessHour } from './ShopBusinessHour'
 import type { ShopDetail } from './ShopDetail'
+import type { ShopFacilityRule } from './ShopFacilityRule'
+import type { ShopFeature } from './ShopFeature'
 import type { ShopImage } from './ShopImage'
 import type { ShopPaymentMethod } from './ShopPaymentMethod'
+import type { ShopPricing } from './ShopPricing'
 import type { ShopSocialMedia } from './ShopSocialMedia'
 import type { User } from './User'
 
@@ -18,7 +21,10 @@ export type Shop = {
 export type ShopWithDetails = Shop & {
   businessHours: Array<ShopBusinessHour>
   detail: ShopDetail
+  facilityRules: Array<ShopFacilityRule>
+  features: Array<ShopFeature>
   images: Array<ShopImage>
   paymentMethods: Array<ShopPaymentMethod>
+  pricing: ShopPricing
   socialMedias: Array<ShopSocialMedia>
 }
