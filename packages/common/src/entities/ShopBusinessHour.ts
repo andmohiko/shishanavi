@@ -1,4 +1,5 @@
 import { z } from 'zod'
+
 import type { Shop } from './Shop'
 
 export const daySchema = z.enum([
