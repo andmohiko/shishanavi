@@ -10,12 +10,14 @@
   },
   "scripts": {
     "postinstall": "pnpm build",
-    "build": "tsup --config tsup.config.ts"
+    "build": "tsup --config tsup.config.ts",
+    "lint:eslint": "eslint src -c eslint.config.mjs"
   },
   "dependencies": {
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@shishanavi/eslint-config": "workspace:*",
     "@shishanavi/ts-config": "workspace:*",
     "@types/node": "^20.12.7",
     "tsup": "^8.3.0",
