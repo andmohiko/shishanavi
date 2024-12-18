@@ -1,4 +1,4 @@
 {
-  "eslint.workingDirectories": ["./apps/frontend", "./apps/backend"],
+  "eslint.workingDirectories": ["./apps/**", "./packages/**"],
   "prettier.prettierPath": "./node_modules/prettier/index.mjs"
 }
