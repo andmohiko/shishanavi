@@ -6,8 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:eslint": "eslint src -c eslint.config.mjs"
+    "lint": "eslint './**/*.{ts,tsx}'",
+    "lint:tsc": "tsc --noEmit",
+    "lint:eslint": "eslint src -c eslint.config.mjs",
+    "lint:prettier": "prettier --check src",
+    "lint:cspell": "cspell -c ../../cspell.json src/**/*",
+    "format:prettier": "prettier --write src"
   },
   "dependencies": {
     "next": "15.1.2",
