@@ -54,7 +54,9 @@ export default tseslint.config(
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
-      '@next/next/no-html-link-for-pages': ['error', './src/pages/'],
+      // TODO: App Router用のルールを設定する
+      '@next/next/no-html-link-for-pages': 'off',
+      '@next/next/no-duplicate-head': 'off',
     },
   },
   {
