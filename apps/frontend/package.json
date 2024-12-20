@@ -1,0 +1,40 @@
+{
+  "name": "@shishanavi/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint './**/*.{ts,tsx}'",
+    "lint:tsc": "tsc --noEmit",
+    "lint:eslint": "eslint src -c eslint.config.mjs",
+    "lint:prettier": "prettier --check src",
+    "lint:cspell": "cspell -c ../../cspell.json src/**/*",
+    "format:prettier": "prettier --write src"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "dayjs": "^1.11.13",
+    "next": "15.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@next/eslint-plugin-next": "^15.1.2",
+    "@shishanavi/eslint-config": "workspace:*",
+    "@shishanavi/ts-config": "workspace:*",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint-config-next": "^14.0.4",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}
