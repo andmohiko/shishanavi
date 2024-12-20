@@ -3,7 +3,7 @@ import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 
 import type { CustomContext, CustomEnv } from '~/types/locals'
-import { testRouter } from '~/routers/test'
+import { testRouter } from '~/routers/testRouter'
 
 const port = 4000
 const app = new Hono<CustomEnv>()
