@@ -14,9 +14,13 @@
     "format:prettier": "prettier --write src"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "dayjs": "^1.11.13",
     "next": "15.1.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
