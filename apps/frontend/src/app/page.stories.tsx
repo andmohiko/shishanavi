@@ -1,11 +1,9 @@
 import type { Meta } from '@storybook/react'
 
-import Page from './page';
+import Page from './page'
 
-const meta: Meta = {
+const meta: Meta = {}
 
-}
+export default meta
 
-export default meta;
-
-export const Primary = () => <Page />;
+export const Primary = () => <Page />
