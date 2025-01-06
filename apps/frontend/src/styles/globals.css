@@ -41,3 +41,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  /* color */
+  --black: #000000;
+  --white: #ffffff;
+
+  --black-900: #18181b;
+
+  --sp-breakpoint: 768px;
+  --tablet-breakpoint: 1024px;
+  --content-width: 1440px; /* 最大コンテンツ幅 */
+  --pc-side-padding: 28px;
+  --sp-side-padding: 20px;
+}
