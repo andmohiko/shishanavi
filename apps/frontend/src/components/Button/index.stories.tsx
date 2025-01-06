@@ -41,3 +41,11 @@ export const SP: Story = {
     },
   },
 }
+
+export const Tablet: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: 'tablet',
+    },
+  },
+}
