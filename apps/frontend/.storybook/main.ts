@@ -2,9 +2,6 @@ import type { StorybookConfig } from '@storybook/nextjs'
 
 import { join, dirname } from 'path'
 
-import '../src/styles/reset.css'
-import '../src/styles/globals.css'
-
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
