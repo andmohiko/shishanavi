@@ -1,0 +1,32 @@
+.budgetAndVacation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .definitionWrap {
+    display: flex;
+    align-items: center;
+
+    dt,
+    dd {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--black-900);
+    }
+
+    dd {
+      margin-inline-start: 5px;
+    }
+
+    dt:after {
+      content: ':';
+      color: var(--black-900);
+    }
+
+    .vacation {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
