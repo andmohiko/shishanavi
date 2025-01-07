@@ -1,0 +1,15 @@
+.access {
+  display: flex;
+  align-items: center;
+
+  .txt {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black-500);
+  }
+
+  .txt:not(:last-child)::after {
+    content: '｜';
+    color: var(--black-500);
+  }
+}
