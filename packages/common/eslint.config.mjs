@@ -21,4 +21,7 @@ export default tseslint.config(...custom, {
       },
     },
   },
+  rules: {
+    'no-restricted-imports': 'off',
+  },
 })
