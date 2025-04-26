@@ -9,7 +9,6 @@
 
     dt,
     dd {
-      font-size: 13px;
       font-weight: 400;
       color: var(--black-900);
     }
@@ -29,4 +28,16 @@
       gap: 5px;
     }
   }
+}
+
+.small {
+  font-size: 0.5rem;
+}
+
+.medium {
+  font-size: 0.8rem;
+}
+
+.large {
+  font-size: 1.2rem;
 }
