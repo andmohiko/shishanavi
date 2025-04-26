@@ -20,6 +20,7 @@ export default tseslint.config(
       '**/out/*',
       '**/.next/*',
       'eslint.config.mjs',
+      '**/.storybook/*',
     ],
     languageOptions: {
       parserOptions: {
