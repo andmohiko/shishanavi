@@ -1,0 +1,26 @@
+.snsShare {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+
+  img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .googleMapIcon {
+    width: 64px;
+    height: 36px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .divider {
+    width: 1px;
+    height: 36px;
+    background-color: var(--black-200);
+  }
+}
