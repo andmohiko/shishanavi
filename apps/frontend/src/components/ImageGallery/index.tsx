@@ -32,8 +32,8 @@ export const ImageGallery = ({ images }: Props): ReactNode => {
             <Image
               key={idx}
               src={img}
-              height={46}
-              width={86}
+              height={45}
+              width={80}
               alt={`サブ画像${idx}`}
               className={styles.subImage}
               onClick={() => setMainImage(img)}

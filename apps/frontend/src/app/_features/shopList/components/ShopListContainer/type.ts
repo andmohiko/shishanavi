@@ -14,6 +14,7 @@ export type Card = {
   sns: {
     instagram: string
     x: string
+    line: string
   }
   map: string
   imageUrls: Array<string>
@@ -36,10 +37,8 @@ export const cardMock: Array<Card> = Array.from({ length: 20 }, (_, i) => ({
   sns: {
     instagram: `https://instagram.com/shop${i + 1}`,
     x: `https://x.com/shop${i + 1}`,
+    line: `https://line/shop${i + 1}`,
   },
   map: `https://maps.google.com/?q=shop${i + 1}`,
-  imageUrls: [
-    `https://example.com/image${i + 1}_1.jpg`,
-    `https://example.com/image${i + 1}_2.jpg`,
-  ],
+  imageUrls: [`/test.jpg`, `/images/x.png`, `/test.jpg`, `/test.jpg`],
 }))

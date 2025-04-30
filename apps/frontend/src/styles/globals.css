@@ -21,6 +21,7 @@ body {
 
 main {
   display: block;
+  margin: 0 auto;
   max-width: var(--content-width);
   padding: 80px var(--pc-side-padding) 10px;
 }
