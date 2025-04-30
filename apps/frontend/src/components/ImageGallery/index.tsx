@@ -36,7 +36,11 @@ export const ImageGallery = ({ images }: Props): ReactNode => {
               width={80}
               alt={`サブ画像${idx}`}
               className={styles.subImage}
-              onClick={() => setMainImage(img)}
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                setMainImage(img)
+              }}
             />
           ))}
         </div>
