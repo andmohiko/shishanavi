@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 
 import '~/styles/reset.css'
 import '~/styles/globals.css'
-import { Header } from '~/components/Header'
-import { Footer } from '~/components/Footer'
+import { BaseLayout } from '~/components/Layout/BaseLayout'
 
 export const SITE_NAME = 'Shisha Navi'
 
@@ -46,13 +45,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <html lang="ja">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  )
+  return <BaseLayout>{children}</BaseLayout>
 }

@@ -2,7 +2,7 @@
   width: 100%;
   padding: var(--pc-side-padding) 18px;
   background-color: var(--white);
-  max-height: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
