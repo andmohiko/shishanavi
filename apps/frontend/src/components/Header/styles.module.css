@@ -9,6 +9,7 @@
   position: fixed;
   top: 0;
   z-index: 1000;
+  opacity: 0.9;
 
   img {
     width: 130px;
