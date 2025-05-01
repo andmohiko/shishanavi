@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ShopDetailContainer } from '.'
 
-import { cardMock } from '~/app/_features/shopList/components/ShopListContainer/type'
+import { mockShop } from '~/app/_features/shopDetail/type'
 
 type T = typeof ShopDetailContainer
 
@@ -10,7 +10,7 @@ const meta = {
   title: 'features/containers/ShopDetailContainer',
   component: ShopDetailContainer,
   args: {
-    shop: cardMock[0],
+    shop: mockShop,
     shopId: '1',
   },
 } satisfies Meta<T>

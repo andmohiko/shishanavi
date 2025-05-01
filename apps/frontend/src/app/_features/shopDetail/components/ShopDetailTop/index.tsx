@@ -2,15 +2,15 @@ import type { ReactNode } from 'react'
 
 import styles from './styles.module.css'
 
-import type { Card } from '~/app/_features/shopList/components/ShopListContainer/type'
 import { BusinessHoursTag } from '~/components/BusinessHoursTag'
 import { ShopName } from '~/components/ShopName'
 import { Access } from '~/components/Access'
 import { BudgetAndVacation } from '~/components/BudgetAndVacation'
 import { SnsShare } from '~/components/SnsShare'
+import type { Shop } from '~/app/_features/shopDetail/type'
 
 type Props = {
-  shop: Card
+  shop: Shop
 }
 
 export const ShopDetailTop = ({ shop }: Props): ReactNode => {

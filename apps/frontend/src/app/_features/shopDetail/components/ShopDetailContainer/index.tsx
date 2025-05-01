@@ -2,13 +2,13 @@ import type { ReactNode } from 'react'
 
 import styles from './styles.module.css'
 
-import type { Card } from '~/app/_features/shopList/components/ShopListContainer/type'
 import { ImageSlider } from '~/components/ImageSlider'
 import { ShopDetailTop } from '~/app/_features/shopDetail/components/ShopDetailTop'
+import type { Shop } from '~/app/_features/shopDetail/type'
 
 type Props = {
   shopId: string
-  shop: Card
+  shop: Shop
 }
 
 export const ShopDetailContainer = ({ shopId, shop }: Props): ReactNode => {
