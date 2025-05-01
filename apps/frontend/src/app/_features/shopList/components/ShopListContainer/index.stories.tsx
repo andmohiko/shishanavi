@@ -11,6 +11,12 @@ const meta = {
   component: ShopListContainer,
   args: {
     shopList: cardMock,
+    searchAreas: [
+      { id: 1, name: '全て', isSelected: true },
+      { id: 2, name: '池袋', isSelected: false },
+      { id: 3, name: '渋谷', isSelected: false },
+      { id: 4, name: '難波', isSelected: false },
+    ],
   },
 } satisfies Meta<T>
 
