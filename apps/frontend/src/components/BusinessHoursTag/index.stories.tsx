@@ -8,8 +8,8 @@ const meta = {
   component: BusinessHoursTag,
   args: {
     isOpen: true,
-    startTime: new Date('2025-10-01T10:00:00'),
-    endTime: new Date('2025-10-01T20:00:00'),
+    startTime: '12:00',
+    endTime: '18:00',
   },
 } satisfies Meta<T>
 

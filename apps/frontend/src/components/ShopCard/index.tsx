@@ -24,8 +24,8 @@ export const ShopCard = ({ shop }: Props): ReactNode => {
       <div className={styles.cardRight}>
         <BusinessHoursTag
           isOpen={true}
-          startTime={new Date(shop.hours.open)}
-          endTime={new Date(shop.hours.close)}
+          startTime={shop.hours.open}
+          endTime={shop.hours.close}
         />
         <ShopName name={shop.name} />
         <Access access={shop.access} address={shop.address} />
