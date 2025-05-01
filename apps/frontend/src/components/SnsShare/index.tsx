@@ -41,7 +41,12 @@ export const SnsShare = ({
     <ul className={styles.snsShare}>
       {activeSnsList.map((sns) => (
         <li key={sns.name} className={styles.snsShare}>
-          <Link href={sns.url!} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={sns.url!}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={sns.icon}
               alt={`${sns.name}でシェア`}
@@ -65,6 +70,7 @@ export const SnsShare = ({
             target="_blank"
             rel="noopener noreferrer"
             className={styles.googleMap}
+            onClick={(e) => e.stopPropagation()}
           >
             <Image
               src="/images/google-map.png"
