@@ -19,3 +19,26 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .shopDetailTop {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shopDetailTop {
+    width: 100%;
+
+    .shopDetailHeader {
+      .budgetWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+      }
+    }
+  }
+}
