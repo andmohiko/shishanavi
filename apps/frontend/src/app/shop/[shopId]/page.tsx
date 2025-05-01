@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import { ShopDetailContainer } from '~/app/_features/shopDetail/components/ShopDetailContainer'
-import { cardMock } from '~/app/_features/shopList/components/ShopListContainer/type'
+import { mockShop } from '~/app/_features/shopDetail/type'
 
 export const metadata: Metadata = {
   title: '店舗詳細',
@@ -17,7 +17,7 @@ type Props = {
 const Page = async ({ params }: Props) => {
   const { shopId } = await params
 
-  const shop = cardMock[0]
+  const shop = mockShop
   return <ShopDetailContainer shopId={shopId} shop={shop} />
 }
 
