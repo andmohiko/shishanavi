@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
+import 'ress'
 
-import '~/styles/reset.css'
 import '~/styles/globals.css'
 import { BaseLayout } from '~/components/Layout/BaseLayout'
 
