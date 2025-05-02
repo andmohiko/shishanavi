@@ -20,6 +20,14 @@ export type Shop = {
   }
   map: string
   imageUrls: Array<string>
+  budgetDetail: {
+    shisha: number
+    charge: number
+    another?: Array<{
+      name: string
+      price: number
+    }>
+  }
 }
 
 export const mockShop: Shop = {
@@ -47,4 +55,30 @@ export const mockShop: Shop = {
   },
   map: `https://maps.google.com/?q=shop1`,
   imageUrls: [`/test.jpg`, `/images/x.png`, `/test.jpg`, `/test.jpg`],
+  budgetDetail: {
+    shisha: 2000,
+    charge: 1000,
+    another: [
+      {
+        name: 'シェアチャージ',
+        price: 1000,
+      },
+      {
+        name: 'ボトルアイス',
+        price: 500,
+      },
+      {
+        name: 'アイスホース',
+        price: 500,
+      },
+      {
+        name: 'ソフトドリンク',
+        price: 500,
+      },
+      {
+        name: 'おつまみ',
+        price: 500,
+      },
+    ],
+  },
 }
