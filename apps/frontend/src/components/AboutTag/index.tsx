@@ -1,11 +1,9 @@
 import type { ReactNode } from 'react'
 
 import styles from './styles.module.css'
+import type { AboutTag as AboutTagType } from './type'
 
-type Props = {
-  name: string
-  value: Array<string> | string
-}
+type Props = AboutTagType
 
 export const AboutTag = ({ name, value }: Props): ReactNode => {
   return (

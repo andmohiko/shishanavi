@@ -1,0 +1,42 @@
+.shopAboutTagList {
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black-900);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+      min-width: 45%;
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .shopAboutTagList {
+    width: 100%;
+
+    ul {
+      flex-direction: column;
+      gap: 8px;
+
+      li {
+        min-width: 100%;
+      }
+    }
+  }
+}
