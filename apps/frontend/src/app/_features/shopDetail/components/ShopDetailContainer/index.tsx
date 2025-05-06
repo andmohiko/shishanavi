@@ -15,6 +15,25 @@ type Props = {
 }
 
 export const ShopDetailContainer = ({ shopId, shop }: Props): ReactNode => {
+  const features = [
+    {
+      title: '機材ブランド',
+      description: shop.brands.join(', '),
+    },
+    {
+      title: 'フレーバー数',
+      description: shop.flavors,
+    },
+    {
+      title: 'おすすめのフレーバー',
+      description: shop.recommendedFlavors.join('、 '),
+    },
+    {
+      title: '雰囲気',
+      description: shop.mood,
+    },
+  ]
+
   const priceTags: Array<AboutTag> = [
     {
       name: 'シーシャ',
@@ -40,7 +59,7 @@ export const ShopDetailContainer = ({ shopId, shop }: Props): ReactNode => {
     <div className={styles.shopDetailContainer} key={shopId}>
       <ImageSlider images={shop.imageUrls} />
       <ShopDetailTop shop={shop} />
-      <ShopDetailFeatures shop={shop} />
+      <ShopDetailFeatures features={features} />
       <ShopAboutTagList title="料金" tags={priceTags} />
     </div>
   )

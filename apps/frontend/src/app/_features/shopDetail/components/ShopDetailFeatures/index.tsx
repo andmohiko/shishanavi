@@ -2,32 +2,14 @@ import type { ReactNode } from 'react'
 
 import styles from './styles.module.css'
 
-import type { Shop } from '~/app/_features/shopDetail/type'
-
 type Props = {
-  shop: Shop
+  features: Array<{
+    title: string
+    description: string
+  }>
 }
 
-export const ShopDetailFeatures = ({ shop }: Props): ReactNode => {
-  const features = [
-    {
-      title: '機材ブランド',
-      description: shop.brands.join(', '),
-    },
-    {
-      title: 'フレーバー数',
-      description: shop.flavors,
-    },
-    {
-      title: 'おすすめのフレーバー',
-      description: shop.recommendedFlavors.join('、 '),
-    },
-    {
-      title: '雰囲気',
-      description: shop.mood,
-    },
-  ]
-
+export const ShopDetailFeatures = ({ features }: Props): ReactNode => {
   return (
     <dl className={styles.shopDetailFeatures}>
       {features.map((feature) => (
