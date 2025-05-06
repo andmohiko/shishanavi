@@ -8,9 +8,14 @@ import type { AboutTag as AboutTagType } from '~/components/AboutTag/type'
 type Props = {
   title: string
   tags: Array<AboutTagType>
+  annotation?: string
 }
 
-export const ShopAboutTagList = ({ title, tags }: Props): ReactNode => {
+export const ShopAboutTagList = ({
+  title,
+  tags,
+  annotation,
+}: Props): ReactNode => {
   return (
     <div className={styles.shopAboutTagList}>
       <h3>{title}</h3>
@@ -21,6 +26,7 @@ export const ShopAboutTagList = ({ title, tags }: Props): ReactNode => {
           </li>
         ))}
       </ul>
+      {annotation && <p className={styles.annotation}>* {annotation}</p>}
     </div>
   )
 }

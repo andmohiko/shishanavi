@@ -1,25 +1,39 @@
 export type Shop = {
   id: number
-  name: string
-  access: string
-  address: string
+  name: string // 店名
+  access: string // アクセス
+  address: string // 住所
+  // 営業時間
+  // 例: { open: '12:00', close: '03:00' }
   hours: {
     open: string
     close: string
   }
+  // 予算
   budget: number
+  // 定休日
   vacation: Array<string>
+  // 機材ブランド
   brands: Array<string>
+  // フレーバー
   flavors: string
+  // おすすめフレーバー
   recommendedFlavors: Array<string>
+  // 雰囲気
   mood: string
+  // SNS
+  // 例: { instagram: 'https://instagram.com/shop1', x: 'https://x.com/shop1' }
   sns: {
     instagram: string
     x: string
     line: string
   }
+  // 地図
+  // 例: 'https://maps.google.com/?q=shop1'
   map: string
+  // 画像URL
   imageUrls: Array<string>
+  // 予算詳細
   budgetDetail: {
     shisha: number
     charge: number
@@ -27,6 +41,28 @@ export type Shop = {
       name: string
       price: number
     }>
+  }
+  // rules タグ
+  rules: {
+    smoking: boolean
+    alcohol: boolean
+    food: boolean
+    wifi: boolean
+    charge: boolean
+    parking: boolean
+    privateReservation: boolean
+    reservation: boolean
+    privateRoom: boolean
+    goods: boolean
+    annotation: string
+  }
+  // 決済方法 タグ
+  paymentMethods: {
+    cash: boolean
+    creditCard: boolean
+    qrCode: boolean
+    electronicMoney: boolean
+    annotation: string
   }
 }
 
@@ -80,5 +116,26 @@ export const mockShop: Shop = {
         price: 500,
       },
     ],
+  },
+  rules: {
+    smoking: true,
+    alcohol: true,
+    food: true,
+    wifi: true,
+    charge: true,
+    parking: false,
+    privateReservation: false,
+    reservation: true,
+    privateRoom: false,
+    goods: false,
+    annotation:
+      'フード，ソフトドリンクは持ち込み可能ですがアルコール類だけお断りさせて頂いております。',
+  },
+  paymentMethods: {
+    cash: true,
+    creditCard: true,
+    qrCode: true,
+    electronicMoney: false,
+    annotation: 'QRコード決済はPayPayのみ対応しています。',
   },
 }

@@ -38,5 +38,10 @@
         min-width: 100%;
       }
     }
+    .annotation {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--black-900);
+    }
   }
 }
