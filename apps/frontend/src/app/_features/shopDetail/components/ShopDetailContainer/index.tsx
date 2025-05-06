@@ -164,7 +164,7 @@ export const ShopDetailContainer = ({ shopId, shop }: Props): ReactNode => {
         tags={paymentTags}
         annotation={shop.paymentMethods.annotation}
       />
-      <ShopDetailFeatures features={shopMainDetails} />
+      <ShopDetailFeatures title="店舗情報" features={shopMainDetails} />
     </div>
   )
 }
