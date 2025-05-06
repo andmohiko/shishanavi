@@ -2,7 +2,21 @@ export type Shop = {
   id: number
   name: string // 店名
   access: string // アクセス
-  address: string // 住所
+  // 住所
+  // 例: 東京都豊島区
+  address: string
+  // 住所詳細
+  // 例: 東京都豊島区池袋2丁目12-14 第8前島ビル 501
+  addressDetail: string
+  // 営業詳細
+  // 例: 日・月 14:00～24:00 (L.O.23:00)\n火〜土 16:00～翌5:00 (L.O.4:00)
+  openHours: string
+  // 席数
+  // 例: カウンター4席\nソファ2席
+  seats: string
+  tel: string // 電話番号
+  accessDetail: string // アクセス詳細
+  annotation: string // 注意事項
   // 営業時間
   // 例: { open: '12:00', close: '03:00' }
   hours: {
@@ -71,6 +85,13 @@ export const mockShop: Shop = {
   name: 'SHISHA maya -cafe&Bar- 池袋東口店',
   access: '池袋駅から徒歩10分',
   address: '東京都豊島区',
+  openHours: '日・月 14:00～24:00 (L.O.23:00)\n火〜土 16:00～翌5:00 (L.O.4:00)',
+  seats: 'カウンター4席\nソファ2席',
+  tel: '03-1234-5678',
+  addressDetail: '東京都豊島区池袋2丁目12-14 第8前島ビル 501',
+  accessDetail: '[池袋駅] C6出口より徒歩5分圏内',
+  annotation:
+    'お酒を飲まれる方は20歳以上の方のみご入店いただけます。未成年の方は保護者同伴でのご来店をお願い致します。',
   hours: {
     open: '12:00',
     close: '03:00',

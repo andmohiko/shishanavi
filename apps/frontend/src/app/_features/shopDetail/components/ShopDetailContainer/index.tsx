@@ -117,6 +117,37 @@ export const ShopDetailContainer = ({ shopId, shop }: Props): ReactNode => {
     },
   ]
 
+  const shopMainDetails = [
+    {
+      title: '店名',
+      description: shop.name,
+    },
+    {
+      title: '営業時間',
+      description: shop.openHours,
+    },
+    {
+      title: '定休日',
+      description: shop.vacation.join('\n'),
+    },
+    {
+      title: '席数',
+      description: shop.seats,
+    },
+    {
+      title: '電話番号',
+      description: shop.tel,
+    },
+    {
+      title: 'アクセス',
+      description: `${shop.addressDetail}\n${shop.accessDetail}`,
+    },
+    {
+      title: '備考',
+      description: shop.annotation,
+    },
+  ]
+
   return (
     <div className={styles.shopDetailContainer} key={shopId}>
       <ImageSlider images={shop.imageUrls} />
@@ -133,6 +164,7 @@ export const ShopDetailContainer = ({ shopId, shop }: Props): ReactNode => {
         tags={paymentTags}
         annotation={shop.paymentMethods.annotation}
       />
+      <ShopDetailFeatures features={shopMainDetails} />
     </div>
   )
 }
