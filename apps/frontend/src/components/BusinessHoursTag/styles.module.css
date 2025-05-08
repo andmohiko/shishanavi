@@ -1,0 +1,26 @@
+.businessHoursTag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+}

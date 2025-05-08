@@ -1,14 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { BudgetAndVacation } from './'
+import { ShopName } from '.'
 
-type T = typeof BudgetAndVacation
+type T = typeof ShopName
 
 const meta = {
-  component: BudgetAndVacation,
+  component: ShopName,
   args: {
-    budget: 1000,
-    vacation: ['第一日曜日', '祝日'],
+    name: 'SHISHA maya -cafe&Bar- 池袋東口店',
   },
 } satisfies Meta<T>
 
@@ -24,9 +23,9 @@ export const Small: Story = {
   },
 }
 
-export const large: Story = {
+export const Large: Story = {
   args: {
-    size: 'medium',
+    size: 'large',
   },
 }
 
