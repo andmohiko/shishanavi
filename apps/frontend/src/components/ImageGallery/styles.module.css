@@ -9,8 +9,7 @@
     width: 100%;
     height: 185px;
     border-radius: 5px;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
   }
 
   .subImages {
@@ -21,8 +20,8 @@
 
     .subImage {
       display: block;
-      width: 86px;
-      height: 46px;
+      width: 80px;
+      height: 45px;
       border-radius: 5px;
       object-fit: cover;
       object-position: center;
