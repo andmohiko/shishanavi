@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Rules to write Hono
+globs: *.ts
+---
+Hono
+
+- httpリクエストを受ける関数はroutersディレクトリに記述する
+- DBへのCRUDはoperation関数を作成し、operationsディレクトリに記述する
+- operation関数の返り値はprismaの型を使用せず、entitiesに定義された型を使用する
+- グローバルで使用する情報はcontextに保持し、contextから取得する

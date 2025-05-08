@@ -1,13 +1,17 @@
 import { Hono } from 'hono'
 
-import { createShopOperation } from '~/features/shop/operations/createShopOperation'
+import { createUserOperation } from '~/features/user/operations/createUserOperation'
 import type { CustomContext } from '~/types/locals'
 
 export const testRouter = new Hono()
 
-testRouter.post('/data', async (c: CustomContext) => {
+testRouter.post('/init', async (c: CustomContext) => {
   try {
-    await createShopOperation()
+    const user = await createUserOperation({
+      email: 'test@example.com',
+      role: 'ADMIN',
+    })
+    return c.json({ user })
   } catch (error) {
     return c.json({ error }, 500)
   }
