@@ -1,7 +1,6 @@
 import { type Metadata } from 'next'
 
-import { ShopListContainer } from './_features/shopList/components/ShopListContainer'
-
+import { ShopListContainer } from '~/app/_features/shopList/components/ShopListContainer'
 import { cardMock } from '~/app/_features/shopList/type'
 
 export const metadata: Metadata = {
