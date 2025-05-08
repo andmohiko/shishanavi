@@ -5,13 +5,13 @@ import { cors } from 'hono/cors'
 import type { CustomContext, CustomEnv } from '~/types/locals'
 import { testRouter } from '~/routers/testRouter'
 
-const port = 4000
+const port = 8080
 const app = new Hono<CustomEnv>()
 
 app.use(cors())
 
 app.get('/', (c) => {
-  return c.text('Hello Hono!')
+  return c.text('Hello Shishanavi!')
 })
 
 app.route('/test', testRouter)
