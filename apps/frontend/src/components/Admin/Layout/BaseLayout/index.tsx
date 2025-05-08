@@ -1,5 +1,10 @@
-import { AppShell, AppShellMain } from '@mantine/core'
+import { AppShell, AppShellMain, AppShellNavbar } from '@mantine/core'
 import type { ReactNode } from 'react'
+
+import styles from './styles.module.css'
+
+import { NavMenu } from '~/components/Admin/NavMenu'
+import { FlexBox } from '~/components/Admin/Base/FlexBox'
 
 type Props = {
   children: ReactNode
@@ -17,6 +22,9 @@ export const BaseLayout = ({ children }: Props): ReactNode => {
       }}
       padding="md"
     >
+      <AppShellNavbar p="sm" className={styles.navBar}>
+        <NavMenu />
+      </AppShellNavbar>
       <AppShellMain
         bg="cyan.0"
         style={{
@@ -24,7 +32,15 @@ export const BaseLayout = ({ children }: Props): ReactNode => {
           overflow: 'scroll',
         }}
       >
-        {children}
+        <FlexBox
+          justify="flex-start"
+          align="flex-start"
+          style={{
+            position: 'relative',
+          }}
+        >
+          {children}
+        </FlexBox>
       </AppShellMain>
     </AppShell>
   )

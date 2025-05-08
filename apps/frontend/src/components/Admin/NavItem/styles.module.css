@@ -1,0 +1,17 @@
+.menuItem {
+  padding: 16px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  border-radius: 6px;
+
+  color: #2d3748;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  background-color: #eb335f;
+  color: #ffffff;
+}
