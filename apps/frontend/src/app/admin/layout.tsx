@@ -1,7 +1,7 @@
+import { createTheme, MantineProvider } from '@mantine/core'
 import type { Metadata } from 'next'
 
 import { SITE_NAME } from '~/app/layout'
-import { BaseLayout } from '~/components/Admin/Layout/BaseLayout'
 
 export const metadata: Metadata = {
   title: {
@@ -16,10 +16,15 @@ export const metadata: Metadata = {
   },
 }
 
+const theme = createTheme({
+  autoContrast: true,
+  luminanceThreshold: 0.4,
+})
+
 export default function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return <BaseLayout>{children}</BaseLayout>
+  return <MantineProvider theme={theme}>{children}</MantineProvider>
 }

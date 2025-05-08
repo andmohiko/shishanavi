@@ -1,5 +1,7 @@
+import { BaseLayout } from '~/components/Admin/Layout/BaseLayout'
+
 const Page = () => {
-  return <div>hoge</div>
+  return <BaseLayout>hoge</BaseLayout>
 }
 
 export default Page
