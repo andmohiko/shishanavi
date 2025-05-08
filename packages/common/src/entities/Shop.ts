@@ -20,11 +20,11 @@ export type Shop = {
 
 export type ShopWithDetails = Shop & {
   businessHours: Array<ShopBusinessHour>
-  detail: ShopDetail
-  facilityRules: ShopFacilityRule
-  features: ShopFeature
+  detail: ShopDetail | null
+  facilityRules: ShopFacilityRule | null
+  features: ShopFeature | null
   images: Array<ShopImage>
-  paymentMethods: ShopPaymentMethod
-  pricing: ShopPricing
+  paymentMethods: ShopPaymentMethod | null
+  pricing: ShopPricing | null
   socialMedias: Array<ShopSocialMedia>
 }
