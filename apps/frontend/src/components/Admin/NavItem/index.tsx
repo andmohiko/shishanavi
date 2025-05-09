@@ -8,7 +8,7 @@ export type Props = NavMenuType & {
   isCurrent?: boolean
 }
 
-export const MenuItem = ({
+export const NavItem = ({
   icon,
   label,
   href,

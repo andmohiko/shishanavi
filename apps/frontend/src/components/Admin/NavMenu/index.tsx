@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import styles from './styles.module.css'
 import { locationNavItems } from './type'
 
-import { MenuItem } from '~/components/Admin/NavItem'
+import { NavItem } from '~/components/Admin/NavItem'
 
 export const NavMenu = (): ReactNode => {
   const pathname = usePathname()
@@ -18,7 +18,7 @@ export const NavMenu = (): ReactNode => {
   return (
     <div className={styles.menuItems}>
       {locationNavItems.map((item) => (
-        <MenuItem
+        <NavItem
           key={item.label}
           {...item}
           isCurrent={fullPath === item.href}
