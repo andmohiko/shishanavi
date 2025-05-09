@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { cardMock } from './type'
-
 import { ShopListContainer } from '.'
+
+import { cardMock } from '~/app/_features/shopList/type'
 
 type T = typeof ShopListContainer
 

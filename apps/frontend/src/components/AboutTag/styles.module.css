@@ -1,0 +1,35 @@
+.aboutTag {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--black-100);
+
+  .aboutTagWrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    dt {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black-900);
+    }
+
+    dd {
+      flex: 1;
+      font-size: 1rem;
+      color: var(--black-900);
+      white-space: pre-wrap;
+      word-break: break-word;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        list-style: disc inside;
+      }
+    }
+  }
+}

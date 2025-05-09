@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 
 import styles from './styles.module.css'
 
-import type { Card } from '~/app/_features/shopList/components/ShopListContainer/type'
+import type { Card } from '~/app/_features/shopList/type'
 import { ShopCard } from '~/components/ShopCard'
 
 type Props = {
