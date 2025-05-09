@@ -7,18 +7,18 @@ export const locationNavItems: Array<NavMenuType> = [
   },
   {
     label: '池袋',
-    href: '/admin',
+    href: '/admin?area=2',
   },
   {
     label: '新宿',
-    href: '/admin',
+    href: '/admin?area=3',
   },
   {
     label: '渋谷',
-    href: '/admin',
+    href: '/admin?area=4',
   },
   {
     label: '難波',
-    href: '/admin',
+    href: '/admin?area=5',
   },
 ]
