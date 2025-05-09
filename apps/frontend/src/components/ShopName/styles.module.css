@@ -1,0 +1,16 @@
+.shopName {
+  font-weight: 700;
+  color: var(--black-900);
+}
+
+.small {
+  font-size: 1.2rem;
+}
+
+.medium {
+  font-size: 1.5rem;
+}
+
+.large {
+  font-size: 2rem;
+}

@@ -1,14 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { BudgetAndVacation } from './'
+import { ImageGallery } from './'
 
-type T = typeof BudgetAndVacation
+type T = typeof ImageGallery
 
 const meta = {
-  component: BudgetAndVacation,
+  component: ImageGallery,
   args: {
-    budget: 1000,
-    vacation: ['第一日曜日', '祝日'],
+    images: [
+      '/test.jpg',
+      '/test.jpg',
+      '/test.jpg',
+      '/images/instagram.png',
+      '/images/instagram.png',
+      '/images/instagram.png',
+      '/images/instagram.png',
+    ],
   },
 } satisfies Meta<T>
 
@@ -17,18 +24,6 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-  },
-}
-
-export const large: Story = {
-  args: {
-    size: 'medium',
-  },
-}
 
 export const SP: Story = {
   parameters: {

@@ -1,14 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { BudgetAndVacation } from './'
+import { BusinessHoursTag } from '.'
 
-type T = typeof BudgetAndVacation
+type T = typeof BusinessHoursTag
 
 const meta = {
-  component: BudgetAndVacation,
+  component: BusinessHoursTag,
   args: {
-    budget: 1000,
-    vacation: ['第一日曜日', '祝日'],
+    isOpen: true,
+    startTime: '12:00',
+    endTime: '18:00',
   },
 } satisfies Meta<T>
 
@@ -18,15 +19,9 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
 
-export const Small: Story = {
+export const Closed: Story = {
   args: {
-    size: 'small',
-  },
-}
-
-export const large: Story = {
-  args: {
-    size: 'medium',
+    isOpen: false,
   },
 }
 

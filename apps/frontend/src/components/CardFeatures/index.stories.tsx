@@ -1,14 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { BudgetAndVacation } from './'
+import { CardFeatures } from './'
 
-type T = typeof BudgetAndVacation
+type T = typeof CardFeatures
 
 const meta = {
-  component: BudgetAndVacation,
+  component: CardFeatures,
   args: {
-    budget: 1000,
-    vacation: ['第一日曜日', '祝日'],
+    features: [
+      {
+        title: '機材ブランド',
+        value: ['Dschinni', 'Mamay Custom', 'NOMAD', 'Union hookah', 'Maya'],
+      },
+      {
+        title: 'フレーバー',
+        value: '100種類以上',
+      },
+    ],
   },
 } satisfies Meta<T>
 
@@ -17,18 +25,6 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-  },
-}
-
-export const large: Story = {
-  args: {
-    size: 'medium',
-  },
-}
 
 export const SP: Story = {
   parameters: {

@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  padding: var(--pc-side-padding) 18px;
+  background-color: var(--white);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  opacity: 0.9;
+
+  img {
+    width: 130px;
+    height: 36px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: var(--sp-side-padding) 14px;
+  }
+}

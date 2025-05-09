@@ -1,0 +1,22 @@
+.searchAreaTag {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 860px;
+  margin: 0 auto;
+  list-style: none;
+
+  .searchAreaTagItem {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black-900);
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: var(--white);
+  }
+
+  .selected {
+    background-color: var(--black-100);
+  }
+}

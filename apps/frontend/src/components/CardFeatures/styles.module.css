@@ -1,0 +1,35 @@
+.cardFeatures {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+
+  .definitionWrap {
+    display: flex;
+    align-items: center;
+
+    dt,
+    dd {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black-900);
+    }
+
+    dt {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    dd {
+      margin-inline-start: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    dt:after {
+      content: ':';
+      color: var(--black-900);
+    }
+  }
+}
