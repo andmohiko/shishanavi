@@ -39,6 +39,7 @@
         color: var(--black-900);
         white-space: pre-wrap;
         word-break: break-word;
+        line-height: 1.7;
       }
     }
     .futureWrap:is(:last-child) {

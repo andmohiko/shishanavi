@@ -33,6 +33,7 @@ model User {
 model Shop {
   id             String             @id @default(cuid())
   name           String
+  username       String             @unique
   userId         String             @map("user_id")
   user           User               @relation(fields: [userId], references: [id])
   isBanned       Boolean            @default(false) @map("is_banned")

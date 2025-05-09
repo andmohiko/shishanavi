@@ -158,11 +158,13 @@ export const ShopDetailContainer = ({ shopId, shop }: Props): ReactNode => {
         title="設備・ルール"
         tags={rulesTags}
         annotation={shop.rules.annotation}
+        titleWidth="40%"
       />
       <ShopAboutTagList
         title="お支払い方法"
         tags={paymentTags}
         annotation={shop.paymentMethods.annotation}
+        titleWidth="40%"
       />
       <ShopDetailFeatures title="店舗情報" features={shopMainDetails} />
     </div>

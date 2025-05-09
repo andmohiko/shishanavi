@@ -4,17 +4,19 @@ import { cors } from 'hono/cors'
 
 import type { CustomContext, CustomEnv } from '~/types/locals'
 import { testRouter } from '~/routers/testRouter'
+import { shopRouter } from '~/routers/shopRouter'
 
-const port = 4000
+const port = 8080
 const app = new Hono<CustomEnv>()
 
 app.use(cors())
 
 app.get('/', (c) => {
-  return c.text('Hello Hono!')
+  return c.text('Hello Shishanavi!')
 })
 
 app.route('/test', testRouter)
+app.route('/shops', shopRouter)
 
 if (process.env.NODE_ENV === 'localhost') {
   // eslint-disable-next-line no-console
@@ -22,7 +24,7 @@ if (process.env.NODE_ENV === 'localhost') {
 }
 
 app.onError((e, c: CustomContext) => {
-  return c.text('Internal Server Error', 500)
+  return c.text(`Internal Server Error: ${e.message}`, 500)
 })
 
 serve({
