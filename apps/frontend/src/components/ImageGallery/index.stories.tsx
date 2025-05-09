@@ -7,15 +7,7 @@ type T = typeof ImageGallery
 const meta = {
   component: ImageGallery,
   args: {
-    images: [
-      '/test.jpg',
-      '/test.jpg',
-      '/test.jpg',
-      '/images/instagram.png',
-      '/images/instagram.png',
-      '/images/instagram.png',
-      '/images/instagram.png',
-    ],
+    images: ['/test2.jpg', '/test3.jpg', '/test4.jpg', '/test5.jpg'],
   },
 } satisfies Meta<T>
 

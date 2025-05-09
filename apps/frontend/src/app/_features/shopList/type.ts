@@ -40,5 +40,5 @@ export const cardMock: Array<Card> = Array.from({ length: 20 }, (_, i) => ({
     line: `https://line/shop${i + 1}`,
   },
   map: `https://maps.google.com/?q=shop${i + 1}`,
-  imageUrls: [`/test.jpg`, `/images/x.png`, `/test.jpg`, `/test.jpg`],
+  imageUrls: [`/test2.jpg`, `/test3.jpg`, `/test4.jpg`, `/test5.jpg`],
 }))
