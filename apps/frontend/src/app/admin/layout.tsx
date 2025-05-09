@@ -1,3 +1,4 @@
+import '@mantine/core/styles.css'
 import { createTheme, MantineProvider } from '@mantine/core'
 import type { Metadata } from 'next'
 

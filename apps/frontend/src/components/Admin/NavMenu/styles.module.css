@@ -1,13 +1,6 @@
-.navBar {
-  width: 240px;
+.menuItems {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  .menuItems {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 8px;
-  }
+  gap: 8px;
 }
