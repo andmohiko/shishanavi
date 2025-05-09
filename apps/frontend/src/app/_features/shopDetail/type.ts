@@ -111,7 +111,7 @@ export const mockShop: Shop = {
     line: `https://line/shop1`,
   },
   map: `https://maps.google.com/?q=shop1`,
-  imageUrls: [`/test.jpg`, `/images/x.png`, `/test.jpg`, `/test.jpg`],
+  imageUrls: [`/test2.jpg`, `/test3.jpg`, `/test4.jpg`, `/test5.jpg`],
   budgetDetail: {
     shisha: 2000,
     charge: 1000,
