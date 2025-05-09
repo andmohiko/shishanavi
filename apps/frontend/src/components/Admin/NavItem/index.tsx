@@ -19,8 +19,7 @@ export const MenuItem = ({
       href={href}
       className={styles.menuItem}
       style={{
-        backgroundColor: isCurrent ? '#999' : undefined,
-        color: isCurrent ? '#fff' : undefined,
+        backgroundColor: isCurrent ? 'var(--black-100)' : undefined,
       }}
     >
       {icon}

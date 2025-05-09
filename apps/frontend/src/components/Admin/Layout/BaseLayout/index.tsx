@@ -1,5 +1,6 @@
 import { AppShell, AppShellMain, AppShellNavbar } from '@mantine/core'
 import type { ReactNode } from 'react'
+import Image from 'next/image'
 
 import styles from './styles.module.css'
 
@@ -10,7 +11,7 @@ type Props = {
   children: ReactNode
 }
 
-const headerHeight = 72
+const headerHeight = 0
 
 export const BaseLayout = ({ children }: Props): ReactNode => {
   return (
@@ -23,10 +24,19 @@ export const BaseLayout = ({ children }: Props): ReactNode => {
       padding="md"
     >
       <AppShellNavbar p="sm" className={styles.navBar}>
+        <h1>
+          <a href="/admin">
+            <Image
+              src="/images/admin-logo.png"
+              height={27}
+              width={154}
+              alt="管理画面"
+            />
+          </a>
+        </h1>
         <NavMenu />
       </AppShellNavbar>
       <AppShellMain
-        bg="cyan.0"
         style={{
           height: `calc(100dvh - ${headerHeight}px)`,
           overflow: 'scroll',
