@@ -9,12 +9,14 @@ type Props = {
   title: string
   tags: Array<AboutTagType>
   annotation?: string
+  titleWidth?: string
 }
 
 export const ShopAboutTagList = ({
   title,
   tags,
   annotation,
+  titleWidth,
 }: Props): ReactNode => {
   return (
     <div className={styles.shopAboutTagList}>
@@ -22,7 +24,11 @@ export const ShopAboutTagList = ({
       <ul>
         {tags.map((tag) => (
           <li key={tag.name}>
-            <AboutTag name={tag.name} value={tag.value} />
+            <AboutTag
+              name={tag.name}
+              value={tag.value}
+              titleWidth={titleWidth}
+            />
           </li>
         ))}
       </ul>
