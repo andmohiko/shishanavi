@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: '',
+  // 管理画面はnoindex
   robots: {
     index: false,
     follow: false,
