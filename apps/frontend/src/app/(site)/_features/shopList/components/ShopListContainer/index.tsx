@@ -2,9 +2,9 @@ import type { ReactNode } from 'react'
 
 import styles from './styles.module.css'
 
-import type { Card } from '~/app/_features/shopList/type'
-import { CardList } from '~/app/_features/shopList/components/CardList'
-import { SearchAreaTag } from '~/app/_features/shopList/components/SearchAreaTag'
+import type { Card } from '~/app/(site)/_features/shopList/type'
+import { CardList } from '~/app/(site)/_features/shopList/components/CardList'
+import { SearchAreaTag } from '~/app/(site)/_features/shopList/components/SearchAreaTag'
 
 type Props = {
   shopList: Array<Card>

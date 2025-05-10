@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ShopDetailContainer } from '.'
 
-import { mockShop } from '~/app/_features/shopDetail/type'
+import { mockShop } from '~/app/(site)/_features/shopDetail/type'
 
 type T = typeof ShopDetailContainer
 

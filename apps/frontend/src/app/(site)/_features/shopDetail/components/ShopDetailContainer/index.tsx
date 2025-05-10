@@ -3,10 +3,10 @@ import type { ReactNode } from 'react'
 import styles from './styles.module.css'
 
 import { ImageSlider } from '~/components/ImageSlider'
-import { ShopDetailTop } from '~/app/_features/shopDetail/components/ShopDetailTop'
-import type { Shop } from '~/app/_features/shopDetail/type'
-import { ShopDetailFeatures } from '~/app/_features/shopDetail/components/ShopDetailFeatures'
-import { ShopAboutTagList } from '~/app/_features/shopDetail/components/ShopAboutTagList'
+import { ShopDetailTop } from '~/app/(site)/_features/shopDetail/components/ShopDetailTop'
+import type { Shop } from '~/app/(site)/_features/shopDetail/type'
+import { ShopDetailFeatures } from '~/app/(site)/_features/shopDetail/components/ShopDetailFeatures'
+import { ShopAboutTagList } from '~/app/(site)/_features/shopDetail/components/ShopAboutTagList'
 import type { AboutTag } from '~/components/AboutTag/type'
 
 type Props = {

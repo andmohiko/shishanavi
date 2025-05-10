@@ -1,7 +1,7 @@
 import { type Metadata } from 'next'
 
-import { ShopListContainer } from '~/app/_features/shopList/components/ShopListContainer'
-import { cardMock } from '~/app/_features/shopList/type'
+import { ShopListContainer } from '~/app/(site)/_features/shopList/components/ShopListContainer'
+import { cardMock } from '~/app/(site)/_features/shopList/type'
 
 export const metadata: Metadata = {
   title: '店舗一覧',

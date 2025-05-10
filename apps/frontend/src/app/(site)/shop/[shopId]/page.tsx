@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
-import { ShopDetailContainer } from '~/app/_features/shopDetail/components/ShopDetailContainer'
-import { mockShop } from '~/app/_features/shopDetail/type'
+import { ShopDetailContainer } from '~/app/(site)/_features/shopDetail/components/ShopDetailContainer'
+import { mockShop } from '~/app/(site)/_features/shopDetail/type'
 
 export const metadata: Metadata = {
   title: '店舗詳細',

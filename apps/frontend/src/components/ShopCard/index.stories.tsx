@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ShopCard } from './'
 
-import { cardMock } from '~/app/_features/shopList/type'
+import { cardMock } from '~/app/(site)/_features/shopList/type'
 
 type T = typeof ShopCard
 
