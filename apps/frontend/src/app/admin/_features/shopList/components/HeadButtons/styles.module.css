@@ -3,4 +3,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .secondButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    a {
+      padding: 8px 12px;
+      border: 1px solid var(--black-200);
+      border-radius: 10px;
+      color: var(--black-900);
+      background-color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .addButton {
+      background-color: var(--black-900);
+      color: var(--white);
+      border: none;
+    }
+  }
 }

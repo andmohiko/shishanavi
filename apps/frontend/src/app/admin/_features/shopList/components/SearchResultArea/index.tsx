@@ -17,7 +17,7 @@ export const SearchResultArea = ({ shopList }: Props): ReactNode => {
       <ul>
         {shopList.map((shop) => (
           <li key={shop.id}>
-            <Link href={`/admin/shop/edit/${shop.id}`} target="_black">
+            <Link href={`/admin/shop/${shop.id}`} target="_black">
               <div className={styles.linkWrap}>
                 <Image src={shop.image} width={80} height={45} alt="" />
                 <h2>{shop.name}</h2>

@@ -1,6 +1,7 @@
 'use client'
 import type { ReactNode } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 
 import styles from './styles.module.css'
 
@@ -22,6 +23,14 @@ export const HeadButtons = (): ReactNode => {
           router.push(`${url}${area ? '&publish=0' : ''}`)
         }
       />
+      <div className={styles.secondButtons}>
+        <Link href={url} className={styles.sortButton}>
+          並び替え
+        </Link>
+        <Link href="/admin/shop/add" className={styles.addButton}>
+          店舗を追加
+        </Link>
+      </div>
     </div>
   )
 }
