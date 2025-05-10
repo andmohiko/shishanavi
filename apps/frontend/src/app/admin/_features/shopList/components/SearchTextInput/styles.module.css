@@ -1,0 +1,13 @@
+.searchTextInput {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--white);
+  color: var(--black-500);
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 10px;
+  border: 1px solid var(--black-200);
+}

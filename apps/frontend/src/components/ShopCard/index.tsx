@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import styles from './styles.module.css'
 
 import { ImageGallery } from '~/components/ImageGallery'
-import type { Card } from '~/app/_features/shopList/type'
+import type { Card } from '~/app/(site)/_features/shopList/type'
 import { BusinessHoursTag } from '~/components/BusinessHoursTag'
 import { ShopName } from '~/components/ShopName'
 import { Access } from '~/components/Access'

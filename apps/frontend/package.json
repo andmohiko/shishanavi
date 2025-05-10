@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@mantine/core": "^8.0.0",
+    "@mantine/hooks": "^8.0.0",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",
     "next": "15.1.2",

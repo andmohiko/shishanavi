@@ -7,12 +7,10 @@ type Props = {
 
 export const BaseLayout = ({ children }: Props) => {
   return (
-    <html lang="ja">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
   )
 }
