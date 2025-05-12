@@ -1,17 +1,23 @@
 'use client'
-import { AppShell, AppShellMain, AppShellNavbar } from '@mantine/core'
+import {
+  AppShell,
+  AppShellHeader,
+  AppShellMain,
+  AppShellNavbar,
+} from '@mantine/core'
 import { useState, type ReactNode } from 'react'
 
 import styles from './styles.module.css'
 
 import { FlexBox } from '~/components/Admin/Base/FlexBox'
 import { ShopEditNavMenu } from '~/components/Admin/ShopEditNavMenu'
+import { ShopEditLayoutHeader } from '~/components/Admin/ShopEditLayoutHeader'
 
 type Props = {
   children: (currentId: number) => ReactNode
 }
 
-const headerHeight = 0
+const headerHeight = 72
 
 export const ShopEditLayout = ({ children }: Props): ReactNode => {
   const [currentId, setCurrentId] = useState(1)
@@ -27,6 +33,12 @@ export const ShopEditLayout = ({ children }: Props): ReactNode => {
       }}
       padding="md"
     >
+      <AppShellHeader>
+        <ShopEditLayoutHeader
+          currentId={currentId}
+          onClickEdit={() => console.warn('hoge')}
+        />
+      </AppShellHeader>
       <AppShellNavbar p="sm" className={styles.navBar}>
         <ShopEditNavMenu currentId={currentId} onClick={handleClick} />
       </AppShellNavbar>
