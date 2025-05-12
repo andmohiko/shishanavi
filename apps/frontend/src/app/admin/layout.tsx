@@ -6,8 +6,8 @@ import { SITE_NAME } from '~/app/layout'
 
 export const metadata: Metadata = {
   title: {
-    default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
+    default: `${SITE_NAME} 店舗管理`,
+    template: `%s | ${SITE_NAME} 店舗管理`,
   },
   description: '',
   // 管理画面はnoindex

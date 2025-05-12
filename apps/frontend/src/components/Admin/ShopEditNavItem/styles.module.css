@@ -1,0 +1,15 @@
+.menuItem {
+  padding: 9px 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black-900);
+}
+
+.menuItem:hover {
+  background-color: var(--black-100);
+}
