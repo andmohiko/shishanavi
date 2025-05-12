@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ShopCard } from './'
+import { StatusButtons } from './'
 
-import { cardMock } from '~/app/(site)/_features/shopList/type'
-
-type T = typeof ShopCard
+type T = typeof StatusButtons
 
 const meta = {
-  component: ShopCard,
+  component: StatusButtons,
   args: {
-    shop: cardMock[0],
+    initialPublish: true,
+    onClickPublish: () => console.warn('publish'),
+    onClickUnPublish: () => console.warn('unPublish'),
   },
 } satisfies Meta<T>
 

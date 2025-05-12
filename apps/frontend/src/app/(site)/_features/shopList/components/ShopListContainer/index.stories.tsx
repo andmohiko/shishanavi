@@ -1,15 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ShopCard } from './'
+import { ShopListContainer } from '.'
 
 import { cardMock } from '~/app/(site)/_features/shopList/type'
 
-type T = typeof ShopCard
+type T = typeof ShopListContainer
 
 const meta = {
-  component: ShopCard,
+  title: 'features/containers/ShopListContainer',
+  component: ShopListContainer,
   args: {
-    shop: cardMock[0],
+    shopList: cardMock,
+    searchAreas: [
+      { id: 1, name: '全て', isSelected: true },
+      { id: 2, name: '池袋', isSelected: false },
+      { id: 3, name: '渋谷', isSelected: false },
+      { id: 4, name: '難波', isSelected: false },
+    ],
   },
 } satisfies Meta<T>
 
@@ -18,6 +25,12 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
+
+export const Empty: Story = {
+  args: {
+    shopList: [],
+  },
+}
 
 export const SP: Story = {
   parameters: {

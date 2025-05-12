@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ShopCard } from './'
+import { NavItem } from '.'
 
-import { cardMock } from '~/app/(site)/_features/shopList/type'
+import { locationNavItems } from '~/components/Admin/NavMenu/type'
 
-type T = typeof ShopCard
+type T = typeof NavItem
 
 const meta = {
-  component: ShopCard,
+  component: NavItem,
   args: {
-    shop: cardMock[0],
+    ...locationNavItems[1],
   },
 } satisfies Meta<T>
 
@@ -18,6 +18,12 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
+
+export const Current: Story = {
+  args: {
+    isCurrent: true,
+  },
+}
 
 export const SP: Story = {
   parameters: {
