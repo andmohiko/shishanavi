@@ -1,0 +1,22 @@
+.textarea {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 10px;
+  border: 1px solid var(--black-200);
+  padding: 8px 16px;
+
+  textarea {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black-900);
+    resize: none;
+    overflow: auto;
+  }
+
+  .placeholder {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--black-500);
+  }
+}

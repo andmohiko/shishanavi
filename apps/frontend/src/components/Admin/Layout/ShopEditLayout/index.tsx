@@ -52,7 +52,9 @@ export const ShopEditLayout = ({ children }: Props): ReactNode => {
           justify="flex-start"
           align="flex-start"
           style={{
+            maxWidth: '720px',
             position: 'relative',
+            margin: '0 auto',
           }}
         >
           {children(currentId)}

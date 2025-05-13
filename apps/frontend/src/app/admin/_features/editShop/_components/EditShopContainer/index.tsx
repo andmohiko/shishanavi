@@ -10,6 +10,8 @@ type Props = {
 
 export const EditShopContainer = ({ shopId }: Props): ReactNode => {
   // fetch shop data
+  // eslint-disable-next-line no-console
+  console.log('shopId', shopId)
   return (
     <ShopEditLayout>
       {(currentId) => <EditShopForm currentId={currentId} />}
