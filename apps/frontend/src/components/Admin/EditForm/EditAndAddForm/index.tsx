@@ -2,15 +2,15 @@ import type { ReactNode } from 'react'
 
 import styles from './styles.module.css'
 
-import { ShopBasicInfoForm } from '~/app/admin/_features/editShop/_components/ShopBasicInfoForm'
+import { ShopBasicInfoForm } from '~/components/Admin/EditForm/ShopBasicInfoForm'
 
 type Props = {
   currentId: number
 }
 
-export const EditShopForm = ({ currentId }: Props): ReactNode => {
+export const EditAndAddShopForm = ({ currentId }: Props): ReactNode => {
   return (
-    <div className={styles.editShopForm}>
+    <div className={styles.editAndAddShopForm}>
       {(() => {
         switch (currentId) {
           case 1:

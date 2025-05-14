@@ -1,8 +1,8 @@
 'use client'
 import type { ReactNode } from 'react'
 
+import { EditAndAddShopForm } from '~/components/Admin/EditForm/EditAndAddForm'
 import { ShopEditLayout } from '~/components/Admin/Layout/ShopEditLayout'
-import { EditShopForm } from '~/app/admin/_features/editShop/_components/EditShopForm'
 
 type Props = {
   shopId: string
@@ -14,7 +14,7 @@ export const EditShopContainer = ({ shopId }: Props): ReactNode => {
   console.log('shopId', shopId)
   return (
     <ShopEditLayout>
-      {(currentId) => <EditShopForm currentId={currentId} />}
+      {(currentId) => <EditAndAddShopForm currentId={currentId} />}
     </ShopEditLayout>
   )
 }
