@@ -1,0 +1,39 @@
+.shopPriceSystemForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black-900);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+
+      .row {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--black-900);
+      }
+    }
+  }
+}
