@@ -1,0 +1,21 @@
+.simpleButton {
+  max-width: 130px;
+  padding: 7px;
+  border: 1px solid var(--black-200);
+  border-radius: 10px;
+  background-color: var(--white);
+  color: var(--black-900);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.simpleButton:hover {
+  background-color: var(--black-200);
+  color: var(--white);
+  border: 1px solid var(--black-200);
+}

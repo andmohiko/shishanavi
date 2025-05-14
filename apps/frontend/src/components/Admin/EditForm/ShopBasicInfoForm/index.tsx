@@ -1,9 +1,11 @@
 import type { ReactNode } from 'react'
+import Image from 'next/image'
 
 import styles from './styles.module.css'
 
 import { Input } from '~/components/Admin/Input'
 import { TextArea } from '~/components/Admin/TextArea'
+import { SimpleButton } from '~/components/Admin/SimpleButton'
 
 export const ShopBasicInfoForm = (): ReactNode => {
   return (
@@ -13,6 +15,41 @@ export const ShopBasicInfoForm = (): ReactNode => {
         <div className={styles.formGroup}>
           <Input placeholder="店舗名" title="店舗名" />
           <Input placeholder="080********" title="電話番号" type="tel" />
+        </div>
+        <div className={styles.formGroup}>
+          <h3>営業時間</h3>
+          <div className={styles.row}>
+            <Input title="営業開始" type="time" />
+            <Input title="営業終了" type="time" />
+            <SimpleButton
+              label={
+                <Image
+                  alt="削除"
+                  src="/images/trash.png"
+                  height={22}
+                  width={22}
+                />
+              }
+            />
+          </div>
+          <SimpleButton label="営業時間を追加" />
+        </div>
+        <div className={styles.formGroup}>
+          <h3>臨時定休日</h3>
+          <div className={styles.row}>
+            <Input title="定休日" type="date" />
+            <SimpleButton
+              label={
+                <Image
+                  alt="削除"
+                  src="/images/trash.png"
+                  height={22}
+                  width={22}
+                />
+              }
+            />
+          </div>
+          <SimpleButton label="臨時定休日を追加" />
         </div>
         <div className={styles.formGroup}>
           <h3>住所・アクセス</h3>
