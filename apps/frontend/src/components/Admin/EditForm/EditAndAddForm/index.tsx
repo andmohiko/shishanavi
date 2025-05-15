@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import { ShopBasicInfoForm } from '~/components/Admin/EditForm/ShopBasicInfoForm'
 import { ShopFeatureForm } from '~/components/Admin/EditForm/ShopFeatureForm'
 import { ShopPriceSystemForm } from '~/components/Admin/EditForm/ShopPriceSystemForm'
+import { ShopEquipmentAndRulesForm } from '~/components/Admin/EditForm/ShopEquipmentAndRulesForm'
 
 type Props = {
   currentId: number
@@ -21,6 +22,8 @@ export const EditAndAddShopForm = ({ currentId }: Props): ReactNode => {
             return <ShopFeatureForm />
           case 3:
             return <ShopPriceSystemForm />
+          case 4:
+            return <ShopEquipmentAndRulesForm />
         }
       })()}
     </div>

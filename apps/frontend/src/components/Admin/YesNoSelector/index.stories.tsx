@@ -1,11 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ShopPriceSystemForm } from '.'
+import { YesNoSelector } from './'
 
-type T = typeof ShopPriceSystemForm
+type T = typeof YesNoSelector
 
 const meta = {
-  component: ShopPriceSystemForm,
+  component: YesNoSelector,
+  args: {
+    name: 'test',
+    title: 'テスト',
+    value: true,
+    onChange: (value: boolean) => {
+      console.warn(value)
+    },
+  },
 } satisfies Meta<T>
 
 export default meta
