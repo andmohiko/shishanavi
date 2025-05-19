@@ -12,16 +12,8 @@
   }
 
   form {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    justify-content: center;
-
-    .formGroup {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      justify-content: center;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
 }

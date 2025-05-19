@@ -46,7 +46,7 @@ export const YesNoSelector = ({
             name={name}
             value="no"
             checked={!value}
-            onChange={(e) => onChange(e.target.value === 'no')}
+            onChange={(e) => onChange(e.target.value === 'yes')}
           />
           <span className={styles.cross}>✕</span>
         </label>

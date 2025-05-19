@@ -1,0 +1,33 @@
+.shopPaymentMethodForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black-900);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+
+    .paymentWrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+    }
+  }
+}
