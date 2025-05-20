@@ -1,0 +1,25 @@
+.select {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--black-200);
+  padding: 8px 16px;
+
+  select {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black-900);
+    border: none;
+    background: transparent;
+    outline: none;
+    appearance: none;
+  }
+
+  .placeholder {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--black-500);
+    display: block;
+    margin-bottom: 4px;
+  }
+}

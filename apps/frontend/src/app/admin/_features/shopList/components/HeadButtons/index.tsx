@@ -27,7 +27,7 @@ export const HeadButtons = (): ReactNode => {
         <Link href={url} className={styles.sortButton}>
           並び替え
         </Link>
-        <Link href="/admin/shop/add" className={styles.addButton}>
+        <Link href="/admin/shop/create" className={styles.addButton}>
           店舗を追加
         </Link>
       </div>
