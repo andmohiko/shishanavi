@@ -1,4 +1,4 @@
-import { EditShopContainer } from '~/app/admin/_features/editShop/_components/EditShopContainer'
+import { EditShopContainer } from '~/app/admin/_features/editShop/components/EditShopContainer'
 
 type Props = {
   params: Promise<{
