@@ -4,7 +4,8 @@ import 'ress'
 import '~/styles/globals.css'
 import { BaseLayout } from '~/components/Layout/BaseLayout'
 
-export const SITE_NAME = 'Shisha Navi'
+export const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME!
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL!
 
 export const metadata: Metadata = {
   title: {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: SITE_NAME,
     description: '',
-    url: '',
+    url: SITE_URL,
     siteName: SITE_NAME,
     images: [
       {
